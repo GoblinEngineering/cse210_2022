@@ -1,0 +1,69 @@
+you need to declare what type of variable something is right off the batt, and you cant change it later.
+
+int x = 5;
+OR ---
+int x;
+x = 5;
+
+your print statment is 
+
+Console.WriteLine(x); to go to the next line
+or 
+Console.Write(x); to stay on the same line
+---------
+variable types 
+
+int - Integers (whole numbers, positive and negative)
+string - Strings (a sequence of characters, including letters, numbers, or symbols)
+float - Floating point numbers (numbers that use decimals)
+double - Double precision floating point numbers (just like a float, except it takes up twice as much memory, so it can hold larger numbers or numbers with more decimal places)
+bool - Boolean variables (true or false)
+
+Console.ReadLine(); is your input statement, you need to print out your prompt with a write line as it doesnt accept text.
+
+python to C conversion
+
+PY
+color = input("What is your favorite color? ")
+
+C#
+Console.Write("What is your favorite color? ");
+string color = Console.ReadLine();
+
+-------
+In C#, curly braces {} define the body of an if statement or a function. In Python, the body is defined by indenting.
+you still indent the body, but this is only a convention, the actual mechanism to define the body is the curly braces {}.
+
+Also, in C#, you do not use a colon : to start the body, and when using if statements, you must always put the condition in parentheses ().
+
+C#
+
+if (x > y)
+{
+  Console.WriteLine("greater");
+}
+
+Python
+
+if x > y:
+  print("greater")
+-------
+As you may have noticed above, in C#, statements end with the semicolon ; character.
+ Typically one statement will be one line, however, sometimes you may have a long statement that extends on multiple lines until the semicolon ; is reached.
+
+The rule to end statements with semicolons applies to statements such as calling a function, declaring a variable, setting a variable, and so forth.
+ You do not put a semicolon between the condition of an if statement and its body, or the name of a function and its body.
+-------
+
+for putting variables in strings use the $ sign instead of f.
+
+PY
+school = "BYU-Idaho"
+print(f"I am studying at {school}.")
+
+C#
+
+string school = "BYU-Idaho";
+Console.WriteLine($"I am studying at {school}.");
+-----
+
