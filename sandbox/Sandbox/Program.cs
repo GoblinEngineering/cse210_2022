@@ -4,6 +4,9 @@ class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Hello Sandbox World!");
+        for (int i = 0; i < 999999; i++)
+        {
+            Console.WriteLine(i);
+        }
     }
 }

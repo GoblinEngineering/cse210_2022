@@ -66,4 +66,47 @@ C#
 string school = "BYU-Idaho";
 Console.WriteLine($"I am studying at {school}.");
 -----
+while loop is self explanitory but now there is a do-while loop.
+it runs through it once then at the end checks to see if the conditions make it go again.
 
+string input;
+
+do
+{
+    Console.Write("Do you want to continue? ");
+    input = Console.ReadLine();
+} while (input == "yes");
+
+for loops are more like a "for X in range loop" and can be set up like so.
+
+for (int i = 0; i < 10; i++)
+{
+    Console.WriteLine(i);
+}
+
+or 
+
+for (int i = 2; i <= 20; i = i + 2)
+{
+    Console.WriteLine(i);
+}
+
+for each loops go through lists
+
+foreach (string color in colors)
+{
+    Console.WriteLine(color);
+}
+----------
+to get a random number from the computer In C#, this is done by creating an instance of the Random class, and then using it to get the next integer in a particular range.
+
+Random randomGenerator = new Random();
+int number = randomGenerator.Next(1, 11);
+-----
+
+layout of functions 
+
+returnType FunctionName(dataType parameter1, dataType parameter2)
+{
+    // function_body
+}
