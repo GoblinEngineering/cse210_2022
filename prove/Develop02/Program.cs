@@ -6,11 +6,11 @@ class Program
     {
         //setup
         List<string> prompt_options = new List<string>();
-        prompt_options.Add("Who was the most interesting person I interacted with today?");
-        prompt_options.Add("What was the best part of my day?");
-        prompt_options.Add("How did I see the hand of the Lord in my life today?");
-        prompt_options.Add("What was the strongest emotion I felt today?");
-        prompt_options.Add("If I had one thing I could do over today, what would it be?");
+        prompt_options.Add("what food are you craving today?");
+        prompt_options.Add("who made you laugh today?");
+        prompt_options.Add("what are you excited for tomorrow?");
+        prompt_options.Add("What was the best thing that happened to you today?");
+        prompt_options.Add("what did you read today that was interesting?");
         Random randomGenerator = new Random();   
         //code
 
