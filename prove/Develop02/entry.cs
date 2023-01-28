@@ -10,6 +10,5 @@ public class Entry
     {
         string Space = System.Environment.NewLine;
         File.AppendAllText(_fileName, ($"Prompt asked : {_promptAsked}" + Space + $"Answer : {_txtEntry} - {_date}" + Space + Space ));
-    }
-        
+    }       
 }
