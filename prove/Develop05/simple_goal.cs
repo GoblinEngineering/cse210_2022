@@ -1,6 +1,6 @@
 class simple_goal : goal
 {
-    simple_goal(string name, string dialog, int points, int completedTasksCount, bool finished, int target_completions) : base (name, dialog, points, completedTasksCount, finished, target_completions)
+    public simple_goal(string name, string dialog, int points, int completedTasksCount, bool finished, int target_completions) : base (name, dialog, points, completedTasksCount, finished, target_completions) 
     {
         //
     }

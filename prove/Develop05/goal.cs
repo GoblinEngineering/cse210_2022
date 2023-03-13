@@ -4,7 +4,7 @@ class goal
     private string _name;
     private int _completedTasks = 0;//
     private string _taskDialog;
-    private bool _finishedTask = false;//
+    private bool _finishedTask;//
     private int _pointValue;
     private int _targetCompletions;
 

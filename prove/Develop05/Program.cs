@@ -8,28 +8,75 @@ class Program
 
 
         
-        void save()
+        void save()//finished
         {
             string file_name;
             Console.WriteLine("enter the name of the file");
             file_name = Console.ReadLine();
+            File.Delete(file_name);
             foreach(goal item in goals)
             {
-                //
-                //write
-                //
                 
+                File.AppendAllText(file_name, ($"{item.get_name()}:{item.get_completedTasks()}:{item.get_taskDialog()}:{item.get_finishedTask}:{item.get_pointValue()}:{item.get_targetCompletions()}" + System.Environment.NewLine));
+
             }
 
 
         }
-        void load()
-        {
-            //
-        }
+        // void load()
+        // {
+        //     string[] lines = File.ReadAllLines(file_name);
+
+        //         foreach (string line in lines)
+        //         Console.WriteLine(line);
+
+        // }
         void create()
         {
-            //
+            string option;
+            Console.WriteLine("1. Simple Goal");
+            Console.WriteLine("2. Eternal Goal");
+            Console.WriteLine("3. Checklist Goal");
+            option = Console.ReadLine();
+            string name;
+            int completedTasks = 0;
+            string taskDialog;
+            bool finishedTask = false;
+            int pointValue;
+            int targetCompletions = 1;
+
+            //spaceing
+
+            Console.WriteLine("What is the name of your goal?");
+            name = Console.ReadLine();
+            Console.WriteLine("What is the task?");
+            taskDialog = Console.ReadLine();
+            Console.WriteLine("How many points is it worth when completed?");
+            pointValue = Int32.Parse(Console.ReadLine());
+            
+
+            
+            
+            switch (option)
+            {
+                case "1":
+                simple_goal classname1 = new simple_goal(name, taskDialog, pointValue, completedTasks, finishedTask, targetCompletions);
+                goals.Add(classname1);
+                break;
+                //
+                case "2":
+                eternal_goal classname2 = new eternal_goal(name, taskDialog, pointValue, completedTasks, finishedTask, targetCompletions);
+                goals.Add(classname2);
+                break;
+                //
+                case "3":
+                Console.WriteLine("How many times should the task be completed?");
+                targetCompletions = Int32.Parse(Console.ReadLine());
+                checklist_goal classname3 = new checklist_goal(name, taskDialog, pointValue, completedTasks, finishedTask, targetCompletions);
+                goals.Add(classname3);
+                break;
+                
+            }
         }
         void list_goals()
         {
@@ -52,6 +99,7 @@ class Program
         //pick a activity to mark off
         //display score
         //quit
+        Console.Clear();
         string option = "";
         do
         {
@@ -72,7 +120,7 @@ class Program
                 break;
                 //
             case "2":
-                load();
+                //load();
                 break;
                 //
             case "3":
@@ -91,7 +139,9 @@ class Program
                 display();
                 break;
                 //
+            
             }
+            Console.Clear();
         }while(option != "7");
         
     }

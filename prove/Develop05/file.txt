@@ -1,0 +1,2 @@
+fly:0:die:System.Func`1[System.Boolean]:100:1
+extra fly:0:nosedive:System.Func`1[System.Boolean]:100:1
